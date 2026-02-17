@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { @apply border-surface-700/50; }
+  body { @apply bg-surface-950 text-surface-200; }
+}
+
+@layer components {
+  /* ── Glass morphism ── */
+  .glass {
+    @apply border border-surface-700/40 bg-surface-800/60 backdrop-blur-md;
+  }
+  .glass-strong {
+    @apply border border-surface-600/50 bg-surface-800/80 backdrop-blur-xl;
+  }
+
+  /* ── Buttons ── */
+  .btn-primary {
+    @apply bg-gradient-to-r from-primary-600 to-primary-500 text-white
+           shadow-lg shadow-primary-500/20 transition-all duration-200
+           hover:shadow-primary-500/30 hover:brightness-110
+           active:scale-[0.98];
+  }
+  .btn-accent {
+    @apply bg-gradient-to-r from-accent-500 to-accent-400 text-surface-900
+           shadow-lg shadow-accent-500/20 transition-all duration-200
+           hover:shadow-accent-500/30 hover:brightness-110
+           active:scale-[0.98];
+  }
+  .btn-ghost {
+    @apply border border-surface-600 bg-surface-800/60 text-surface-300
+           transition-all hover:bg-surface-700 hover:text-white;
+  }
+
+  /* ── Badges ── */
+  .badge {
+    @apply inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-semibold;
+  }
+  .badge-success {
+    @apply bg-primary-500/15 text-primary-400 border border-primary-500/20;
+  }
+  .badge-warning {
+    @apply bg-accent-500/15 text-accent-400 border border-accent-500/20;
+  }
+  .badge-danger {
+    @apply bg-danger-500/15 text-danger-400 border border-danger-500/20;
+  }
+  .badge-info {
+    @apply bg-blue-500/15 text-blue-400 border border-blue-500/20;
+  }
+
+  /* ── Gradient text ── */
+  .primary-gradient-text {
+    @apply bg-gradient-to-r from-primary-400 to-primary-300 bg-clip-text text-transparent;
+  }
+  .accent-gradient-text {
+    @apply bg-gradient-to-r from-accent-400 to-accent-300 bg-clip-text text-transparent;
+  }
+
+  /* ── Scrollbar ── */
+  .scrollbar-thin::-webkit-scrollbar { width: 4px; }
+  .scrollbar-thin::-webkit-scrollbar-track { background: transparent; }
+  .scrollbar-thin::-webkit-scrollbar-thumb { @apply rounded-full bg-surface-600; }
+}
