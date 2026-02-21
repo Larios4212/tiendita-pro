@@ -38,13 +38,13 @@ export default function AlertsPage() {
   const info = alerts.filter((a) => a.severity === 'info');
 
   return (
-    <div className="p-6 space-y-6">
+    <div className="p-4 sm:p-6 space-y-5 sm:space-y-6">
       {/* Header */}
       <div>
-        <h1 className="text-2xl font-bold text-white flex items-center gap-2">
+        <h1 className="text-xl sm:text-2xl font-bold text-white flex items-center gap-2">
           <Bell size={24} className="text-primary-400" /> Alertas Inteligentes
         </h1>
-        <p className="text-sm text-surface-400">{alerts.length} alertas activas · monitoreo automático del inventario</p>
+        <p className="text-xs sm:text-sm text-surface-400">{alerts.length} alertas activas · monitoreo automático del inventario</p>
       </div>
 
       {/* Summary cards */}
@@ -102,7 +102,7 @@ export default function AlertsPage() {
                       key={alert.id}
                       variants={fadeUp}
                       custom={i}
-                      className="glass flex items-start gap-4 rounded-xl p-4"
+                      className="glass flex items-start gap-3 sm:gap-4 rounded-xl p-3 sm:p-4"
                     >
                       <div className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-xl ${
                         alert.severity === 'critical' ? 'bg-danger-500/15 text-danger-400'
@@ -146,7 +146,7 @@ export default function AlertsPage() {
                         )}
                       </div>
 
-                      <span className="shrink-0 text-xs text-surface-600">{formatTimeAgo(alert.timestamp)}</span>
+                      <span className="shrink-0 text-xs text-surface-600 hidden sm:block">{formatTimeAgo(alert.timestamp)}</span>
                     </motion.div>
                   );
                 })}

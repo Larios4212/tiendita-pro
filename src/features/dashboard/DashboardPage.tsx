@@ -31,10 +31,10 @@ export default function DashboardPage() {
   const recentSales = sales.slice(0, 5);
 
   return (
-    <div className="p-6 space-y-6">
+    <div className="p-4 sm:p-6 space-y-5 sm:space-y-6">
       {/* Header */}
       <div>
-        <h1 className="text-2xl font-bold text-white">Dashboard</h1>
+        <h1 className="text-xl sm:text-2xl font-bold text-white">Dashboard</h1>
         <p className="text-sm text-surface-400">Resumen de tu negocio en tiempo real</p>
       </div>
 
@@ -199,31 +199,31 @@ export default function DashboardPage() {
       </div>
 
       {/* ── Revenue Summary ── */}
-      <motion.div variants={fadeUp} initial="hidden" animate="visible" className="glass rounded-2xl p-5">
-        <div className="flex flex-wrap items-center justify-between gap-4">
+      <motion.div variants={fadeUp} initial="hidden" animate="visible" className="glass rounded-2xl p-4 sm:p-5">
+        <div className="space-y-4 sm:space-y-0 sm:flex sm:flex-wrap sm:items-center sm:justify-between sm:gap-4">
           <div>
             <h3 className="text-sm font-semibold text-surface-300">Resumen Mensual</h3>
             <p className="text-xs text-surface-500">Estimado basado en ventas actuales</p>
           </div>
-          <div className="flex items-center gap-8">
+          <div className="grid grid-cols-3 gap-4 sm:flex sm:items-center sm:gap-8">
             <div className="text-center">
               <p className="text-xs text-surface-500">Ingresos</p>
-              <p className="text-xl font-bold text-white flex items-center gap-1">
+              <p className="text-base sm:text-xl font-bold text-white flex items-center justify-center gap-1">
                 {formatCurrency(stats.monthlyRevenue)}
-                <ArrowUpRight size={16} className="text-primary-400" />
+                <ArrowUpRight size={16} className="text-primary-400 hidden sm:block" />
               </p>
             </div>
             <div className="text-center">
               <p className="text-xs text-surface-500">Ganancia</p>
-              <p className="text-xl font-bold text-primary-400 flex items-center gap-1">
+              <p className="text-base sm:text-xl font-bold text-primary-400 flex items-center justify-center gap-1">
                 {formatCurrency(stats.monthlyProfit)}
-                <ArrowUpRight size={16} />
+                <ArrowUpRight size={16} className="hidden sm:block" />
               </p>
             </div>
             <div className="text-center">
               <p className="text-xs text-surface-500">Productos</p>
-              <p className="text-xl font-bold text-white flex items-center gap-1">
-                <Package size={16} className="text-surface-400" />
+              <p className="text-base sm:text-xl font-bold text-white flex items-center justify-center gap-1">
+                <Package size={16} className="text-surface-400 hidden sm:block" />
                 {stats.totalProducts}
               </p>
             </div>
