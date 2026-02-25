@@ -1,0 +1,16 @@
+import{j as e,N as l,O as c}from"./index-CWJm3WaG.js";import{L as h}from"./Logo-NnSGTjZP.js";import{u as x}from"./appStore-CDGwvAa2.js";import{c as s,m as d}from"./createLucideIcon-iWi5oUHK.js";import{P as f}from"./package-DxO2yiJI.js";import{S as m}from"./shopping-cart-uj2-E-lU.js";import{B as p}from"./bell-D1g3CODl.js";import"./dollar-sign-CFVWwato.js";/**
+ * @license lucide-react v0.468.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const u=s("ChevronLeft",[["path",{d:"m15 18-6-6 6-6",key:"1wnfg3"}]]);/**
+ * @license lucide-react v0.468.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const g=s("ChevronRight",[["path",{d:"m9 18 6-6-6-6",key:"mthhwq"}]]);/**
+ * @license lucide-react v0.468.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const b=s("LayoutDashboard",[["rect",{width:"7",height:"9",x:"3",y:"3",rx:"1",key:"10lvy0"}],["rect",{width:"7",height:"5",x:"14",y:"3",rx:"1",key:"16une8"}],["rect",{width:"7",height:"9",x:"14",y:"12",rx:"1",key:"1hutg5"}],["rect",{width:"7",height:"5",x:"3",y:"16",rx:"1",key:"ldoo1y"}]]),y=[{to:"/dashboard",icon:b,label:"Dashboard"},{to:"/inventory",icon:f,label:"Inventario"},{to:"/pos",icon:m,label:"Punto de Venta"},{to:"/alerts",icon:p,label:"Alertas"}];function j(){const{sidebarOpen:r,toggleSidebar:o,alerts:i}=x(),a=i.filter(t=>t.severity==="critical").length;return e.jsxs(d.aside,{animate:{width:r?240:72},transition:{type:"spring",damping:25,stiffness:300},className:"relative flex h-screen shrink-0 flex-col border-r border-surface-800 bg-surface-900/95",children:[e.jsx("div",{className:"flex h-16 items-center gap-2 px-4",children:e.jsx(h,{size:"sm",withText:r})}),e.jsx("nav",{className:"mt-4 flex flex-1 flex-col gap-1 px-3",children:y.map(t=>e.jsxs(l,{to:t.to,className:({isActive:n})=>`group flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium transition-all ${n?"bg-primary-500/15 text-primary-400":"text-surface-400 hover:bg-surface-800 hover:text-white"}`,children:[e.jsx(t.icon,{size:20,className:"shrink-0"}),r&&e.jsx("span",{children:t.label}),t.to==="/alerts"&&a>0&&e.jsx("span",{className:"ml-auto flex h-5 w-5 items-center justify-center rounded-full bg-danger-500 text-[10px] font-bold text-white",children:a})]},t.to))}),e.jsx("button",{onClick:o,className:"absolute -right-3 top-20 flex h-6 w-6 items-center justify-center rounded-full border border-surface-700 bg-surface-800 text-surface-400 shadow-lg transition hover:text-white",children:r?e.jsx(u,{size:14}):e.jsx(g,{size:14})}),r&&e.jsxs("div",{className:"border-t border-surface-800 p-4",children:[e.jsx("p",{className:"text-xs text-surface-500",children:"TienditaPro v1.0"}),e.jsx("p",{className:"text-[10px] text-surface-600",children:"Demo · No real data"})]})]})}function A(){return e.jsxs("div",{className:"flex h-screen overflow-hidden bg-surface-950",children:[e.jsx(j,{}),e.jsx("main",{className:"flex-1 overflow-y-auto scrollbar-thin",children:e.jsx(c,{})})]})}export{A as default};
