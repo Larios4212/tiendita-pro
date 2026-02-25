@@ -39,15 +39,15 @@ export default function LandingPage() {
       <div className="pointer-events-none absolute bottom-0 left-1/3 h-[350px] w-[500px] rounded-full bg-primary-500/5 blur-[90px]" />
 
       {/* ── Nav ── */}
-      <nav className="relative z-10 flex items-center justify-between px-4 sm:px-6 py-4 sm:py-5 md:px-12">
+      <nav className="relative z-10 flex items-center justify-between px-6 py-5 md:px-12">
         <Logo size="md" />
-        <Link to="/dashboard" className="btn-primary rounded-xl px-4 sm:px-5 py-2 sm:py-2.5 text-xs sm:text-sm font-semibold flex items-center gap-2">
+        <Link to="/dashboard" className="btn-primary rounded-xl px-5 py-2.5 text-sm font-semibold flex items-center gap-2">
           Abrir Dashboard <ArrowRight size={16} />
         </Link>
       </nav>
 
       {/* ── Hero ── */}
-      <section className="relative z-10 mx-auto max-w-5xl px-4 sm:px-6 pt-12 sm:pt-16 pb-16 sm:pb-20 text-center md:pt-24">
+      <section className="relative z-10 mx-auto max-w-5xl px-6 pt-16 pb-20 text-center md:pt-24">
         <motion.div initial="hidden" animate="visible" className="space-y-6">
           <motion.div variants={fadeUp} custom={0} className="inline-flex items-center gap-2 rounded-full border border-primary-500/30 bg-primary-500/10 px-4 py-1.5 text-sm text-primary-300">
             <Sparkles size={14} /> Control inteligente para tu tiendita
@@ -114,7 +114,7 @@ export default function LandingPage() {
       </section>
 
       {/* ── Benefits ── */}
-      <section className="relative z-10 mx-auto max-w-4xl px-4 sm:px-6 pb-16 sm:pb-20">
+      <section className="relative z-10 mx-auto max-w-4xl px-6 pb-20">
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} className="text-center mb-10">
           <motion.h2 variants={fadeUp} custom={0} className="text-2xl font-bold text-white md:text-3xl">
             ¿Por qué tu tiendita necesita esto?
@@ -131,7 +131,7 @@ export default function LandingPage() {
       </section>
 
       {/* ── Features ── */}
-      <section className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6 pb-20 sm:pb-24">
+      <section className="relative z-10 mx-auto max-w-6xl px-6 pb-24">
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-80px' }} className="text-center mb-14">
           <motion.div variants={fadeUp} custom={0} className="inline-flex items-center gap-2 rounded-full border border-surface-600/50 bg-surface-800/60 px-4 py-1.5 text-sm text-surface-400 mb-4">
             <Zap size={14} className="text-primary-400" /> Funcionalidades
